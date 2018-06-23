@@ -44,7 +44,6 @@ $('.equal').on('click', function() {
   switch (operator) {
     case 'plus':
       result = firstNumber + secondNumber;
-
       $('#result').text(result);
       return;
 
@@ -74,10 +73,8 @@ $('button.clear').on('click', function() {
   number = '';
   firstNumber = '';
   secondNumber = '';
+  operator = '';
   result = 0;
   operatorChosen = false;
-  $('#first-number').text('');
-  $('#operator').text('');
-  $('#second-number').text('');
-  $('#result').text('');
+  $('#first-number, #operator, #second-number, #result').empty();
 });
